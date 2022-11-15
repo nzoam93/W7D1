@@ -11,6 +11,13 @@
     <%= stylesheet_link_tag "application" %>
   </head>
 
+  <header> 
+  <% if logged_in %>
+    <h2> Welcome, <%= @current_user.username %> </h2>
+  <% end %>
+
+  </header>
+
   <body>
     <nav class="main-nav">
       <h1><a href="<%= cats_url %>">99 Cats</a></h1>
